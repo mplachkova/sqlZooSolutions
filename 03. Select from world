@@ -1,4 +1,18 @@
---Large Countries
+--02. Large Countries
 SELECT name FROM world
 WHERE population >= 200000000;
 
+--03. Per capita GDP
+SELECT name, gdp / population AS perCapitaGDP
+FROM world
+WHERE population >=200000000;
+
+--04. South America In millions
+SELECT name, population / 1000000
+FROM world
+WHERE continent = 'South America';
+
+--05. France, Germany, Italy
+SELECT name, population
+FROM world
+WHERE name IN ('France', 'Germany', 'Italy');
